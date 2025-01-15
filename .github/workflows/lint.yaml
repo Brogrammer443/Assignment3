@@ -14,13 +14,13 @@ jobs:
           run: echo "Something"
         - name: checkout repo
           uses: actions/checkout@v4
-        - name: install htmlhint
-          run: npm --save-dev htmlhint
+        - name: install HTMLhint
+          run: npm install --save-dev htmlhint
         - name: install stylelint
-          run: npm --save-dev stylelint
-        - name: lint html files
-          run: npm htmlhint "**/*.html"
+          run: npm install --save-dev stylelint
+        - name: lint HTML files
+          run: npx htmlhint "**/*.html"
         - name: lint stylelint files
-          run: npm stylelint "**/.css"
+          run: npx stylelint "**/.css"
         - name: Display package.json contents
           run: cat package.json
