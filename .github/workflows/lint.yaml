@@ -13,7 +13,7 @@ jobs:
         - name: WELCOME STEP
           run: echo "Something"
         - name: checkout repo
-          run: actions/checkout@V4
+          uses: actions/checkout@V4
         - name: install htmlhint
           run: npm --save-dev htmlhint
         - name: install stylelint
